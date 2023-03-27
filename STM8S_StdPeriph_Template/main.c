@@ -102,8 +102,8 @@ void LoadAndShowBufOnPanel(void) {
 	uint8_t TSA;
   for (TSA = 0; TSA < 2; TSA++) {//select activ string. TSA (top string activ)
     digitalWrite(OE_LED, 0);
-    digitalWrite(A_Line, !TSA);
-    digitalWrite(B_Line, TSA);
+    digitalWrite(A_Line, TSA);
+    digitalWrite(B_Line, !TSA);
     LoadAllBlocks(TSA);
     digitalWrite(STB_LED, 0);
     digitalWrite(OE_LED, 1);
